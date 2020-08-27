@@ -1,10 +1,12 @@
 # find cycle in undirected graph using union and find algorithm.
 def find(v):
+    #TC O(V)
     if parent[v]==-1:
         return v
     return find(parent[v])
 
 def union(fromP,toP):
+    #TC O(N)
     fromP,toP=find(fromP),find(toP)
     parent[fromP]=toP
 
